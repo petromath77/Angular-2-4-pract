@@ -7,23 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'wwrty';
-        this.title = "My first app";
-        this.count = 0;
+var ChildComponent = (function () {
+    function ChildComponent() {
+        this.name = "Евгений";
     }
-    AppComponent.prototype.increase = function () {
-        this.count++;
-    };
-    return AppComponent;
+    return ChildComponent;
 }());
-AppComponent = __decorate([
+ChildComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html',
-        styleUrls: ['app/app.component.css']
+        selector: 'child-comp',
+        template: "<h2>\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C {{name}}!</h2>",
+        styles: ["h2, p {color:red;}"]
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], ChildComponent);
+exports.ChildComponent = ChildComponent;
+//# sourceMappingURL=child.component.js.map

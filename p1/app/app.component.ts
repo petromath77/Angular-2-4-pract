@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
     name= 'wwrty';
     title = "My first app";
+    count: number=0;
+    increase(): void{
+        this.count++;
+    }
 }
