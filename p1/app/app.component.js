@@ -9,19 +9,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'wwrty';
-        this.title = "My first app";
-        this.count = 0;
+        this.name = 'Tom';
+        this.age = 24;
     }
-    AppComponent.prototype.increase = function () {
-        this.count++;
-    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        templateUrl: 'app/app.component.html',
+        template: "<child-comp [userName]=\"name\" [userAge]=\"age\"></child-comp>\n                <input type=\"text\" [(ngModel)]=\"name\"/>\n                <input type=\"number\" [(ngModel)]=\"age\"/>\n                ",
         styleUrls: ['app/app.component.css']
     })
 ], AppComponent);
