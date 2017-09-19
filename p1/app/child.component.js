@@ -13,47 +13,20 @@ var core_1 = require("@angular/core");
 var ChildComponent = (function () {
     function ChildComponent() {
     }
-    Object.defineProperty(ChildComponent.prototype, "userAge", {
-        get: function () { return this._userAge; },
-        set: function (age) {
-            if (age < 0)
-                this._userAge = 0;
-            else if (age > 100)
-                this._userAge = 100;
-            else
-                this._userAge = age;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ChildComponent.prototype, "userName", {
-        get: function () { return this._userName; },
-        set: function (name) {
-            if (name == "")
-                this._userName = "Your name";
-            else
-                this._userName = name;
-        },
-        enumerable: true,
-        configurable: true
-    });
+    ChildComponent.prototype.change = function () {
+        console.log(this.header);
+        this.header.nativeElement.textContent = "Hell to world!";
+    };
     return ChildComponent;
 }());
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Number),
-    __metadata("design:paramtypes", [Number])
-], ChildComponent.prototype, "userAge", null);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String),
-    __metadata("design:paramtypes", [String])
-], ChildComponent.prototype, "userName", null);
+    core_1.ContentChild("headerContent"),
+    __metadata("design:type", HTMLElement)
+], ChildComponent.prototype, "header", void 0);
 ChildComponent = __decorate([
     core_1.Component({
         selector: 'child-comp',
-        template: "<p>User name: {{ userName }}</p> \n               <p>User age: {{ userAge }}</p>",
-        styles: ["h2, p {color:red;}"]
+        template: "<ng-content></ng-content>\n               <button (click)=\"change()\">\u0418\u0437\u043C\u0435\u043D\u0438\u0442\u044C</button>"
     })
 ], ChildComponent);
 exports.ChildComponent = ChildComponent;

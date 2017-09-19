@@ -10,7 +10,8 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
-var child_component_1 = require("./child.component");
+var bold_directive_1 = require("./bold.directive");
+//import { ChildComponent } from './child.component';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,7 +20,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-        declarations: [app_component_1.AppComponent, child_component_1.ChildComponent],
+        declarations: [app_component_1.AppComponent, bold_directive_1.BoldDirective],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

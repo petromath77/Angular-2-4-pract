@@ -1,31 +1,17 @@
-import { Input, Component } from '@angular/core';
+import { Component, ContentChild } from '@angular/core';
 
 @Component({
     selector: 'child-comp',
-    template: `<p>User name: {{ userName }}</p> 
-               <p>User age: {{ userAge }}</p>`,
-    styles: [`h2, p {color:red;}`]
+    template: `<ng-content></ng-content>
+               <button (click)="change()">Изменить</button>`
 })
-export class ChildComponent {
-    _userName: string;
-    _userAge: number;
+export class ChildComponent{
 
-    @Input()
-    set userAge(age:number) {
-        if(age<0)
-            this._userAge=0;
-        else if(age>100)
-            this._userAge=100;
-        else
-            this._userAge = age;
+    @ContentChild("headerContent")
+    header: HTMLElement;
+
+    change() {
+        console.log(this.header);
+        this.header.nativeElement.textContent = "Hell to world!";
     }
-    get userAge() { return this._userAge; }
-    @Input()
-    set userName(name:string){
-        if(name == "")
-            this._userName = "Your name"
-        else
-            this._userName = name;
-    }
-    get userName() { return this._userName; }
 }
