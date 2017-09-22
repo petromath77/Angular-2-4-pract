@@ -5,13 +5,8 @@ import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent }  from './app.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule // <-- import the FormsModule before binding with [(ngModel)]
-  ],
-  declarations: [
-    AppComponent
-  ],
+  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
