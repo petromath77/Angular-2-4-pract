@@ -2,16 +2,12 @@ import { Component, ContentChild } from '@angular/core';
 
 @Component({
     selector: 'child-comp',
-    template: `<ng-content></ng-content>
-               <button (click)="change()">Изменить</button>`
+    template: `<h2>{{title}}</h2>   
+               <img [src]="imgLink" alt="{{title}}">
+               `,
+    styles: ["h2{color: #ccc;}"]
 })
 export class ChildComponent{
-
-    @ContentChild("headerContent")
-    header: HTMLElement;
-
-    change() {
-        console.log(this.header);
-        this.header.nativeElement.textContent = "Hell to world!";
-    }
+    public title = "ComponentChild";
+    public imgLink = "http://lorempixel.com/400/200/";
 }
