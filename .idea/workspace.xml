@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64f7ea50-ffb0-4777-9a69-590352104272" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/heroes_tour/.idea/workspace.xml" afterPath="$PROJECT_DIR$/heroes_tour/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/app.component.js" afterPath="$PROJECT_DIR$/p1/app/app.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/app.component.js.map" afterPath="$PROJECT_DIR$/p1/app/app.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/app.component.ts" afterPath="$PROJECT_DIR$/p1/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/app.module.js" afterPath="$PROJECT_DIR$/p1/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/app.module.js.map" afterPath="$PROJECT_DIR$/p1/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/app.module.ts" afterPath="$PROJECT_DIR$/p1/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/child.component.js" afterPath="$PROJECT_DIR$/p1/app/child.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/child.component.js.map" afterPath="$PROJECT_DIR$/p1/app/child.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/app/child.component.ts" afterPath="$PROJECT_DIR$/p1/app/child.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1/index.html" afterPath="$PROJECT_DIR$/p1/index.html" />
-    </list>
+    <list default="true" id="64f7ea50-ffb0-4777-9a69-590352104272" name="Default" comment="" />
     <ignored path="Angular-2-4-pract.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +26,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/p1/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="66" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="66" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -183,6 +170,16 @@
               <option name="myItemId" value="Angular-2-4-pract" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular-2-4-pract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular-2-4-pract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="p1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -224,22 +221,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Angular-2-4-pract" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Angular-2-4-pract" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/heroes_tour" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/p2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -328,12 +315,12 @@
       <workItem from="1506000946090" duration="1364000" />
       <workItem from="1506085638205" duration="690000" />
       <workItem from="1506338301620" duration="5731000" />
-      <workItem from="1506420582065" duration="8479000" />
+      <workItem from="1506420582065" duration="8830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37131000" />
+    <option name="totallyTimeSpent" value="37482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -742,14 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p1/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -758,6 +737,14 @@
             <marker date="1506434031295" expanded="true" signature="100:293" ph="..." />
             <marker date="1506434031295" expanded="true" signature="431:519" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
