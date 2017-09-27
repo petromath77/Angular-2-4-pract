@@ -10,29 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ChildComponent = (function () {
-    function ChildComponent() {
-        this.userNameChange = new core_1.EventEmitter();
+var employee_service_1 = require("./employee.service");
+var EmployeeListComponent = (function () {
+    function EmployeeListComponent(_employeeService) {
+        this._employeeService = _employeeService;
+        this.employees = [];
     }
-    ChildComponent.prototype.onNameChange = function (model) {
-        this.userName = model;
-        this.userNameChange.emit(model);
+    EmployeeListComponent.prototype.ngOnInit = function () {
+        this.employees = this._employeeService.getEmployees();
     };
-    return ChildComponent;
+    return EmployeeListComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], ChildComponent.prototype, "userName", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], ChildComponent.prototype, "userNameChange", void 0);
-ChildComponent = __decorate([
+EmployeeListComponent = __decorate([
     core_1.Component({
-        selector: 'child-comp',
-        template: "<h2>Child Component</h2>\n                <input [ngModel]=\"userName\" (ngModelChange)=\"onNameChange($event)\" />\n                <p>Value from Parent Comp is </p>"
-    })
-], ChildComponent);
-exports.ChildComponent = ChildComponent;
-//# sourceMappingURL=child.component.js.map
+        selector: 'employee-list',
+        template: "<h2>Employee List</h2>\n               <ul *ngFor=\"let employee of employees\">\n                    <li>{{employee.name}}</li>\n                </ul>\n            "
+    }),
+    __metadata("design:paramtypes", [employee_service_1.EmployeeService])
+], EmployeeListComponent);
+exports.EmployeeListComponent = EmployeeListComponent;
+//# sourceMappingURL=employee-list.component.js.map
