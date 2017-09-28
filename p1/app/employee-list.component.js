@@ -19,14 +19,14 @@ var EmployeeListComponent = (function () {
     EmployeeListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._employeeService.getEmployees()
-            .subscribe(function (resEmployeeData) { return _this.employees = resEmployeeData; });
+            .subscribe(function (resEmployeeData) { return _this.employees = resEmployeeData; }, function (resEmployeeError) { return _this.errorMsg = resEmployeeError; });
     };
     return EmployeeListComponent;
 }());
 EmployeeListComponent = __decorate([
     core_1.Component({
         selector: 'employee-list',
-        template: "<h2>Employee List</h2>\n               <ul *ngFor=\"let employee of employees\">\n                    <li>{{employee.name}}</li>\n                </ul>\n            "
+        template: "<h2>Employee List</h2>\n                <h3>{{errorMsg}}</h3>\n               <ul *ngFor=\"let employee of employees\">\n                    <li>{{employee.name}}</li>\n                </ul>\n            "
     }),
     __metadata("design:paramtypes", [employee_service_1.EmployeeService])
 ], EmployeeListComponent);
