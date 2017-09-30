@@ -10,9 +10,15 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var depart_list_component_1 = require("./depart-list.component");
 var employee_list_component_1 = require("./employee-list.component");
+var depart_detail_component_1 = require("./depart-detail.component");
+var home_component_1 = require("./home.component");
+var page_not_found_component_1 = require("./page-not-found.component");
 var routes = [
+    { path: '', component: home_component_1.HomeComponent },
     { path: 'departments', component: depart_list_component_1.DepartListComponent },
-    { path: 'employees', component: employee_list_component_1.EmployeeListComponent }
+    { path: 'employees', component: employee_list_component_1.EmployeeListComponent },
+    { path: 'departments/:id', component: depart_detail_component_1.DepartDetailComponent },
+    { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -26,5 +32,5 @@ AppRoutingModule = __decorate([
     })
 ], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
-exports.routingComponents = [depart_list_component_1.DepartListComponent, employee_list_component_1.EmployeeListComponent];
+exports.routingComponents = [page_not_found_component_1.PageNotFoundComponent, home_component_1.HomeComponent, depart_list_component_1.DepartListComponent, employee_list_component_1.EmployeeListComponent, depart_detail_component_1.DepartDetailComponent];
 //# sourceMappingURL=app-routing.module.js.map
