@@ -21,15 +21,10 @@ var ProductEditComponent = (function () {
     }
     ProductEditComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var id = +this.route.params.subscribe(function (params) {
-            var id = +params['id'];
-            _this.getProduct(id);
+        var id = +this.route.data.subscribe(function (data) {
+            var product = data['product'];
+            _this.onProductRetrieved(product);
         });
-    };
-    ProductEditComponent.prototype.getProduct = function (id) {
-        var _this = this;
-        this.productService.getProduct(id)
-            .subscribe(function (product) { return _this.onProductRetrieved(product); }, function (error) { return _this.errorMessage = error; });
     };
     ProductEditComponent.prototype.onProductRetrieved = function (product) {
         this.product = product;

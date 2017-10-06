@@ -21,21 +21,13 @@ export class ProductEditComponent implements OnInit {
                 private route: ActivatedRoute) { }
 
     ngOnInit(): void {
-         let id = +this.route.params.subscribe(
-             params =>{
-                let id = +params['id'];
-                this.getProduct(id);
+         let id = +this.route.data.subscribe(
+             data =>{
+                let product = data['product'];
+                this.onProductRetrieved(product);
              }
          );     
     }            
-    getProduct(id: number): void {
-        this.productService.getProduct(id)
-            .subscribe(
-                (product: IProduct) => this.onProductRetrieved(product),
-                (error: any) => this.errorMessage = <any>error
-            );
-    }
-
     onProductRetrieved(product: IProduct): void {
         this.product = product;
 

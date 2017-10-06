@@ -6,9 +6,10 @@ import { ProductEditComponent } from './product-edit.component';
 
 import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductService } from './product.service';
-
+import { ProductResolver } from './product-resolver.service';
 import { SharedModule } from '../shared/shared.module';
 import { ROUTES } from './product.routes';
+
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { ROUTES } from './product.routes';
     ProductFilterPipe
   ],
   providers: [
-    ProductService
+    ProductService, ProductResolver
   ]
 })
 export class ProductModule {}

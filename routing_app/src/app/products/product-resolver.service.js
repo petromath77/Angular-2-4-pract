@@ -9,22 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var ProductDetailComponent = (function () {
-    function ProductDetailComponent(route) {
-        this.route = route;
-        this.pageTitle = 'Product Detail';
+var product_service_1 = require("./product.service");
+var ProductResolver = (function () {
+    function ProductResolver(productService) {
+        this.productService = productService;
     }
-    ProductDetailComponent.prototype.ngOnInit = function () {
-        this.product = this.route.snapshot.data['product'];
+    ProductResolver.prototype.resolve = function (route, state) {
+        var id = +route.params['id'];
+        var product = this.productService.getProduct(id);
+        return product;
     };
-    return ProductDetailComponent;
+    return ProductResolver;
 }());
-ProductDetailComponent = __decorate([
-    core_1.Component({
-        templateUrl: './app/products/product-detail.component.html'
-    }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
-], ProductDetailComponent);
-exports.ProductDetailComponent = ProductDetailComponent;
-//# sourceMappingURL=product-detail.component.js.map
+ProductResolver = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [product_service_1.ProductService])
+], ProductResolver);
+exports.ProductResolver = ProductResolver;
+//# sourceMappingURL=product-resolver.service.js.map
