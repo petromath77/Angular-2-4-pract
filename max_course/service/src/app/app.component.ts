@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RepoService } from './repo.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +9,15 @@ import { Component } from '@angular/core';
         <li>{{repo.id}} => {{repo.full_name}}</li>
       </ul>
     `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [RepoService]
 })
-export class AppComponent {
-   repos = [
-     {id:'1', full_name: 'test1'},
-     {id:'2', full_name: 'test2'},
-     {id:'3', full_name: 'test3'},
-     {id:'4', full_name: 'test4'},
-     {id:'5', full_name: 'test5'}
-   ];
+export class AppComponent implements OnInit{
+    repos: any[];
+   constructor(private repo: RepoService){
+      
+   }
+   ngOnInit(): void {
+    this.repos = this.repo.getRepos();
+  }
 }
