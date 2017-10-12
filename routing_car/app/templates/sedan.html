@@ -1,0 +1,10 @@
+<h3>Sedan List</h3>
+<div class="wrap_container">
+    <div class="list" *ngFor="let car of (cars | sedan)">
+        <div>
+            <h5>Id: {{car.id}}</h5>
+            <a routerLink="/sedan/{{car.name}}" routerLinkActive="active">{{car.name}}</a>
+            <img src="{{car.src}}" alt="">
+        </div>
+    </div>
+</div>
