@@ -17,11 +17,11 @@ var page_not_found_component_1 = require("./page-not-found.component");
 var routes = [
     { path: '', component: home_component_1.HomeComponent },
     { path: 'hatchback', component: hatch_component_1.HatchComponent },
-    { path: 'hatchback/:name', component: detail_component_1.DetailComponent },
+    { path: 'hatchback/:id', component: detail_component_1.DetailComponent },
     { path: 'sedan', component: sedan_component_1.SedanComponent },
-    { path: 'sedan/:name', component: detail_component_1.DetailComponent },
+    { path: 'sedan/:id', component: detail_component_1.DetailComponent },
     { path: 'vagon', component: vagon_component_1.VagonComponent },
-    { path: 'vagon/:name', component: detail_component_1.DetailComponent },
+    { path: 'vagon/:id', component: detail_component_1.DetailComponent },
     { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
 ];
 var AppRoutingModule = (function () {

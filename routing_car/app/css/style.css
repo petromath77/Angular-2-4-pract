@@ -18,7 +18,8 @@ button{
     font-weight: bold;
     color: #99cfe7;
 }
-nav button:hover{
+nav button:hover,
+nav button:focus{
     background-color: #666782;
     margin-left: 5px;
 }

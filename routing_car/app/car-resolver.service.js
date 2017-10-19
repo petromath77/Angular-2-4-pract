@@ -10,21 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var DetailComponent = (function () {
-    function DetailComponent(route) {
-        this.route = route;
+var car_service_1 = require("./car.service");
+var CarResolver = (function () {
+    function CarResolver(carService) {
+        this.carService = carService;
     }
-    DetailComponent.prototype.ngOnInit = function () {
-        this.car = this.route.snapshot.data['product'];
+    CarResolver.prototype.resolve = function (route, state) {
+        var id = +route.params['id'];
+        var car = this.carService.getProduct(id);
+        return car;
     };
-    return DetailComponent;
+    return CarResolver;
 }());
-DetailComponent = __decorate([
-    core_1.Component({
-        templateUrl: './templates/detail.html',
-    }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
-], DetailComponent);
-exports.DetailComponent = DetailComponent;
-//# sourceMappingURL=detail.component.js.map
+CarResolver = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [car_service_1.CarService])
+], CarResolver);
+exports.CarResolver = CarResolver;
+//# sourceMappingURL=car-resolver.service.js.map
