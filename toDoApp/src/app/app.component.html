@@ -1,0 +1,22 @@
+  <header>
+    <img src="assets/img/angular.svg" alt="">
+    <h1 class="text-center">My {{title}}!</h1>
+  </header>
+  <main>
+    <section class="todo-list" *ngIf="todos.length > 0">
+      <div class="todo-item" *ngFor="let todo of todos">
+        <button class="checkbox icon">
+          <i class="material-icons">check_box_outline_blank</i>
+        </button>
+        <span class="title">{{todo}}</span>
+        <div class="actions">
+          <button class="delete icon">
+            <i class="material-icons">delete</i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+
