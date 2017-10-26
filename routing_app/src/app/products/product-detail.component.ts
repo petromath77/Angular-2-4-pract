@@ -3,7 +3,7 @@ import {ActivatedRoute} from '@angular/router'
 import { IProduct } from './product';
 
 @Component({
-    templateUrl: './app/products/product-detail.component.html'
+    templateUrl: './templates/detail.html'
 })
 export class ProductDetailComponent implements OnInit{
     

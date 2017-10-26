@@ -3,7 +3,7 @@
     <div *ngFor="let car of (cars | hatchback)">
         <div class="list">
             <h5>Id: {{car.id}}</h5>
-            <a routerLink="/hatchback/{{car.name}}" routerLinkActive="active">{{car.name}}</a>
+            <a [routerLink]="['/hatchback',car.id]" routerLinkActive="active">{{car.name}}</a>
             <img src="{{car.src}}" alt="">
         </div>
     </div>

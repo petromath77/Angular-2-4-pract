@@ -10,15 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_service_1 = require("./http.service");
+var car_service_1 = require("./car.service");
 var VagonComponent = (function () {
-    function VagonComponent(httpService) {
-        this.httpService = httpService;
+    function VagonComponent(carService) {
+        this.carService = carService;
         this.cars = [];
     }
     VagonComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.httpService.getData()
+        this.carService.getData()
             .subscribe(function (data) { return _this.cars = data.json(); });
     };
     return VagonComponent;
@@ -26,9 +26,9 @@ var VagonComponent = (function () {
 VagonComponent = __decorate([
     core_1.Component({
         templateUrl: './templates/vagon.html',
-        providers: [http_service_1.HttpService]
+        providers: [car_service_1.CarService]
     }),
-    __metadata("design:paramtypes", [http_service_1.HttpService])
+    __metadata("design:paramtypes", [car_service_1.CarService])
 ], VagonComponent);
 exports.VagonComponent = VagonComponent;
 //# sourceMappingURL=vagon.component.js.map

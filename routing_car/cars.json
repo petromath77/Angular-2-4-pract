@@ -1,4 +1,3 @@
-
 [
     {"id": 1, "hatchback": true, "name": "Hatch1", "src": "app/img/h1.jpg", "desc": "Lorem ipsum dolor amet"},
     {"id": 2, "hatchback": true, "name": "Hatch2", "src": "app/img/h2.jpg", "desc": "Lorem ipsum dolor amet"},

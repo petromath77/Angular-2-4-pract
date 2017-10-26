@@ -1,0 +1,7 @@
+<h3>Detail List</h3>
+<div class="list" *ngIf="car">
+    <h5>Name: {{car.name}}</h5>
+    <img src="{{car.src}}" alt="">
+    <p>{{car.desc}}</p>
+    <button (click)="goBack()">Back</button>
+</div>

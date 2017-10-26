@@ -1,0 +1,11 @@
+<h3>Hatchback List</h3>
+<div class="wrap_container">
+    <div *ngFor="let car of (cars | hatchback)">
+        <div class="list">
+            <h5>Id: {{car.id}}</h5>
+            <a [routerLink]="['/hatchback', car.id]">{{car.name}}</a>
+            <img src="{{car.src}}" alt="">
+        </div>
+    </div>
+</div>
+

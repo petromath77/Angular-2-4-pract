@@ -10,15 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_service_1 = require("./http.service");
+var car_service_1 = require("./car.service");
 var HatchComponent = (function () {
-    function HatchComponent(httpService) {
-        this.httpService = httpService;
+    function HatchComponent(carService) {
+        this.carService = carService;
         this.cars = [];
     }
     HatchComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.httpService.getData()
+        this.carService.getData()
             .subscribe(function (data) { return _this.cars = data.json(); });
     };
     return HatchComponent;
@@ -26,9 +26,9 @@ var HatchComponent = (function () {
 HatchComponent = __decorate([
     core_1.Component({
         templateUrl: './templates/hatchback.html',
-        providers: [http_service_1.HttpService]
+        providers: [car_service_1.CarService]
     }),
-    __metadata("design:paramtypes", [http_service_1.HttpService])
+    __metadata("design:paramtypes", [car_service_1.CarService])
 ], HatchComponent);
 exports.HatchComponent = HatchComponent;
 //# sourceMappingURL=hatch.component.js.map

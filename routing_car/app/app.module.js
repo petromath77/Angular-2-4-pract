@@ -15,7 +15,6 @@ var sedan_pipe_1 = require("./sedan.pipe");
 var hatchback_pipe_1 = require("./hatchback.pipe");
 var vagon_pipe_1 = require("./vagon.pipe");
 var car_service_1 = require("./car.service");
-var car_resolver_service_1 = require("./car-resolver.service");
 var app_routing_module_2 = require("./app-routing.module");
 var AppModule = (function () {
     function AppModule() {
@@ -27,9 +26,7 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule, app_routing_module_1.AppRoutingModule, http_1.HttpModule],
         declarations: [app_component_1.AppComponent, app_routing_module_2.routingComponents, sedan_pipe_1.SedanPipe, hatchback_pipe_1.HatchbackPipe, vagon_pipe_1.VagonPipe],
         bootstrap: [app_component_1.AppComponent],
-        providers: [
-            car_service_1.CarService, car_resolver_service_1.CarResolver
-        ]
+        providers: [car_service_1.CarService]
     })
 ], AppModule);
 exports.AppModule = AppModule;
