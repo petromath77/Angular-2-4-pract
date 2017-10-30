@@ -1,15 +1,3 @@
 h1{
     color: blue;
 }
-.room{
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    background-color: black;
-    border: 1px solid black;
-}
-.heightBox{
-    width: 200px;
-    margin: 10px;
-    border: 1px solid black;
-}

@@ -15,12 +15,11 @@ import { HatchbackPipe } from './hatchback.pipe';
 import { VagonPipe } from './vagon.pipe';
 import { CarService } from './car.service';
 import { CarDetailComponent } from './detail.component';
-import { CarResolver } from './car-resolver.service';
 
 @NgModule({
     imports:      [ BrowserModule, AppRoutingModule, HttpModule, InMemoryWebApiModule.forRoot(InMemoryDataService)],
     declarations: [ AppComponent, routingComponents, SedanPipe, HatchbackPipe, VagonPipe],
     bootstrap:    [ AppComponent ],
-    providers: [ CarService, CarResolver ]
+    providers: [ CarService]
 })
 export class AppModule { }

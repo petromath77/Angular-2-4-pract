@@ -7,31 +7,28 @@ import {
     animate,
     keyframes,
     group
-} from '@angular/animations';﻿
+} from '@angular/animations';
 
 @Component({
     selector: 'my-app',
     template: `<h1>Angular Animation</h1>
                 <button (click)="toggle()">Toggle</button>
-                <div [@lightsOnOff]="roomState" class="room"></div>
+                <div *ngIf="showDiv" [@flyInOut]>
+                    FLYOUT
+                </div>
                 `,
     animations: [
-        trigger('lightsOnOff', [
-            state('off', style({
-                backgroundColor: 'black'
-            })),
-            state('on', style({
-                backgroundColor: 'white'
-            })),
-            transition('off => on', [animate('2s')]),
-            transition('on => off', [animate('2s')])
+        trigger('flyInOut', [
+            transition('void => *', [
+                style({transform: 'translateY(100%)'}),
+                animate('0.5s')
+            ])
         ])
     ]
-
 })
 export class AppComponent {
-    roomState: string="off";
+    showDiv: boolean = true;
     toggle(){
-        this.roomState = (this.roomState === "off")? "on" : "off";
+        this.showDiv = this.showDiv;
     }
 }
